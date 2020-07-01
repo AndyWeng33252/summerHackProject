@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -17,6 +18,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var createAccountSegueIdentifier = "CreateAccountSegue"
+    var loginSegueSegueIdentifier = "LoginSegue"
+    var forgotPasswordSegueSegueIdentifier = "ForgotPasswordSegue"
+    
+    var UserID: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,16 +31,33 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text,
+            email.count > 0,
+            password.count > 0
+        else {
+            popUnimplementedAlert(message: "Email or password can't be empty")
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: password) {
+            user, error in
+            if let _ = error, user == nil {
+                self.popUnimplementedAlert(message: "Please check to make sure you used the right e-mail address and password")
+            } else {
+                self.UserID = Auth.auth().currentUser!.uid
+                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+            }
+        }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func popUnimplementedAlert(message:String) {
+        let controller = UIAlertController(
+            title: "Attention",
+            message: message,
+            preferredStyle: .alert)
+        
+        controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(controller,animated:true,completion:nil)
     }
-    */
 
 }

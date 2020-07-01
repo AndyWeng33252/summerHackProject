@@ -10,10 +10,16 @@ import UIKit
 
 class CategoryViewController: UIViewController {
 
+    @IBOutlet weak var categoryName: UILabel!
+    
+    var delegate: UIViewController!
+    var categoryText: String = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        categoryName.text = categoryText
     }
     
 

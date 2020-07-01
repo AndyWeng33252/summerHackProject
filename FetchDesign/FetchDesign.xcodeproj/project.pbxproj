@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C8B6F7624ABDF1F003E9543 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C8B6F7524ABDF1F003E9543 /* GoogleService-Info.plist */; };
+		1C8B6F7824ABF7AD003E9543 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B6F7724ABF7AD003E9543 /* CategoryCollectionViewCell.swift */; };
 		1C8D452B24A6A0C60082EE1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D452A24A6A0C60082EE1D /* AppDelegate.swift */; };
 		1C8D452D24A6A0C60082EE1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D452C24A6A0C60082EE1D /* SceneDelegate.swift */; };
 		1C8D452F24A6A0C60082EE1D /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D452E24A6A0C60082EE1D /* DiscoverViewController.swift */; };
@@ -14,7 +16,6 @@
 		1C8D453424A6A0C60082EE1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8D453224A6A0C60082EE1D /* Main.storyboard */; };
 		1C8D453624A6A0C80082EE1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8D453524A6A0C80082EE1D /* Assets.xcassets */; };
 		1C8D453924A6A0C80082EE1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8D453724A6A0C80082EE1D /* LaunchScreen.storyboard */; };
-		1C8D454124A6A2570082EE1D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C8D454024A6A2570082EE1D /* GoogleService-Info.plist */; };
 		1C8D454324A79EDE0082EE1D /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D454224A79EDE0082EE1D /* NewsFeedViewController.swift */; };
 		1C8D454524A79F0C0082EE1D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D454424A79F0C0082EE1D /* AccountViewController.swift */; };
 		1C8D454724A79F810082EE1D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D454624A79F810082EE1D /* CategoryViewController.swift */; };
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		1613628CAC6D2B91D56244AA /* Pods_FetchDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FetchDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8B6F7524ABDF1F003E9543 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1C8B6F7724ABF7AD003E9543 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C8D452724A6A0C60082EE1D /* FetchDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8D452A24A6A0C60082EE1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8D452C24A6A0C60082EE1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +38,6 @@
 		1C8D453524A6A0C80082EE1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C8D453824A6A0C80082EE1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C8D453A24A6A0C80082EE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C8D454024A6A2570082EE1D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C8D454224A79EDE0082EE1D /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		1C8D454424A79F0C0082EE1D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		1C8D454624A79F810082EE1D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -90,9 +92,10 @@
 				1C8D454824A7A01F0082EE1D /* SettingsViewController.swift */,
 				1C8D454A24A7A08B0082EE1D /* AlnumsViewController.swift */,
 				1C8D453224A6A0C60082EE1D /* Main.storyboard */,
+				1C8B6F7724ABF7AD003E9543 /* CategoryCollectionViewCell.swift */,
 				1C8D453524A6A0C80082EE1D /* Assets.xcassets */,
 				1C8D453724A6A0C80082EE1D /* LaunchScreen.storyboard */,
-				1C8D454024A6A2570082EE1D /* GoogleService-Info.plist */,
+				1C8B6F7524ABDF1F003E9543 /* GoogleService-Info.plist */,
 				1C8D453A24A6A0C80082EE1D /* Info.plist */,
 			);
 			path = FetchDesign;
@@ -176,7 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C8D453924A6A0C80082EE1D /* LaunchScreen.storyboard in Resources */,
-				1C8D454124A6A2570082EE1D /* GoogleService-Info.plist in Resources */,
+				1C8B6F7624ABDF1F003E9543 /* GoogleService-Info.plist in Resources */,
 				1C8D453624A6A0C80082EE1D /* Assets.xcassets in Resources */,
 				1C8D453424A6A0C60082EE1D /* Main.storyboard in Resources */,
 			);
@@ -239,6 +242,7 @@
 				1C8D452D24A6A0C60082EE1D /* SceneDelegate.swift in Sources */,
 				1C8D454B24A7A08B0082EE1D /* AlnumsViewController.swift in Sources */,
 				1C8D454324A79EDE0082EE1D /* NewsFeedViewController.swift in Sources */,
+				1C8B6F7824ABF7AD003E9543 /* CategoryCollectionViewCell.swift in Sources */,
 				1C8D454D24A7AA110082EE1D /* LoginViewController.swift in Sources */,
 				1C8D454924A7A01F0082EE1D /* SettingsViewController.swift in Sources */,
 			);
@@ -392,7 +396,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jam.FetchDesign;
+				PRODUCT_BUNDLE_IDENTIFIER = jamStudio.FetchDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,7 +415,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jam.FetchDesign;
+				PRODUCT_BUNDLE_IDENTIFIER = jamStudio.FetchDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
