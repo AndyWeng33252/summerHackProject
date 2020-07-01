@@ -50,6 +50,14 @@ class LoginViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let nextVC = segue.destination as? MainTabBarController {
+            nextVC.modalPresentationStyle = .fullScreen
+        }
+    }
+    
     func popUnimplementedAlert(message:String) {
         let controller = UIAlertController(
             title: "Attention",
