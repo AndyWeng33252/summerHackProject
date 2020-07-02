@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var createAccount: UIButton!
     @IBOutlet weak var forgotPassword: UIButton!
+    @IBOutlet weak var passwordSecureButton: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -23,11 +24,13 @@ class LoginViewController: UIViewController {
     var forgotPasswordSegueSegueIdentifier = "ForgotPasswordSegue"
     
     var UserID: String = ""
+    var isPasswordSecure = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        passwordTextField.isSecureTextEntry = true
     }
     
     @IBAction func loginPressed(_ sender: Any) {
@@ -47,6 +50,18 @@ class LoginViewController: UIViewController {
                 self.UserID = Auth.auth().currentUser!.uid
                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             }
+        }
+    }
+    
+    @IBAction func passwordSecurePressed(_ sender: Any) {
+        if (isPasswordSecure) {
+            passwordSecureButton.setImage(UIImage(named: "closedEye"), for: .normal)
+            passwordTextField.isSecureTextEntry = false
+            isPasswordSecure = false
+        } else {
+            passwordSecureButton.setImage(UIImage(named: "eye"), for: .normal)
+            passwordTextField.isSecureTextEntry = true
+            isPasswordSecure = true
         }
     }
     
