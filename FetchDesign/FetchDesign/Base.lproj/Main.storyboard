@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zHr-D6-dbi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -492,7 +492,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5L-33-Ipb">
-                                <rect key="frame" x="323" y="765" width="50" height="50"/>
+                                <rect key="frame" x="323" y="765" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="sketch"/>
                             </button>
@@ -936,12 +936,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8R-Pd-Euf">
-                                <rect key="frame" x="360" y="61" width="34" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="switch"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uw6-RJ-xgY">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uw6-RJ-xgY" userLabel="Capture Button">
                                 <rect key="frame" x="172" y="693" width="71" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ok"/>
@@ -949,7 +944,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5c-MG-df6" userLabel="Pick Button">
                                 <rect key="frame" x="58" y="712" width="34" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="box"/>
+                                <state key="normal" image="collection"/>
                                 <connections>
                                     <segue destination="nDB-RR-GXB" kind="show" id="92f-Qr-Xqd"/>
                                 </connections>
@@ -967,34 +962,34 @@
             </objects>
             <point key="canvasLocation" x="780" y="-289"/>
         </scene>
-        <!--View Controller-->
+        <!--Collection View Controller-->
         <scene sceneID="Esf-18-i8R">
             <objects>
-                <viewController id="nDB-RR-GXB" sceneMemberID="viewController">
+                <viewController id="nDB-RR-GXB" customClass="CollectionViewController" customModule="FetchDesign" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lht-o3-960">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dZH-Fm-OW9">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dZH-Fm-OW9" userLabel="Collection Collection View">
                                 <rect key="frame" x="20" y="20" width="374" height="788"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mht-mf-hF2">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mht-mf-hF2">
                                     <size key="itemSize" width="374" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mEc-jt-UpX">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCollectionViewCell" id="mEc-jt-UpX" userLabel="Collection Collection View Cell" customClass="CollectionCollectionViewCell" customModule="FetchDesign" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GF9-H7-2oK">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-Ll-wJE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-Ll-wJE" userLabel="Collection Image View">
+                                                    <rect key="frame" x="8" y="8" width="358" height="184"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Collection Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjf-A3-dWd">
@@ -1006,8 +1001,11 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="374" height="200"/>
                                         <connections>
-                                            <segue destination="I3z-Nx-p20" kind="presentation" modalPresentationStyle="currentContext" id="Xc1-rq-yyQ"/>
+                                            <outlet property="collectionImage" destination="a0T-Ll-wJE" id="G0S-Fa-wEL"/>
+                                            <outlet property="collectionLabel" destination="vjf-A3-dWd" id="JrJ-oe-ZeJ"/>
+                                            <segue destination="I3z-Nx-p20" kind="presentation" identifier="CollectionSegue" modalPresentationStyle="currentContext" id="Xc1-rq-yyQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1017,21 +1015,24 @@
                         <viewLayoutGuide key="safeArea" id="bq3-vM-lYz"/>
                     </view>
                     <navigationItem key="navigationItem" id="J6v-SE-PeM"/>
+                    <connections>
+                        <outlet property="collectionView" destination="dZH-Fm-OW9" id="0Ib-sH-xML"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0m-fc-aid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1544.9275362318842" y="-289.28571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Collection Details View Controller-->
         <scene sceneID="dRP-gp-sKK">
             <objects>
-                <viewController id="I3z-Nx-p20" sceneMemberID="viewController">
+                <viewController id="I3z-Nx-p20" customClass="CollectionDetailsViewController" customModule="FetchDesign" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rl9-EU-olb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yBi-f5-Hc5">
-                                <rect key="frame" x="20" y="20" width="374" height="788"/>
+                                <rect key="frame" x="20" y="73" width="374" height="735"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Wj-1i-mJo">
@@ -1078,11 +1079,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQC-Ym-SpS" userLabel="Cancel Button">
+                                <rect key="frame" x="20" y="20" width="34" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="back"/>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="I3z-Nx-p20" eventType="touchUpInside" id="AW8-bW-TMb"/>
+                                    <action selector="cancelPressed:" destination="x49-r6-4fs" eventType="touchUpInside" id="Nph-dH-SJx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNT-xW-v6M">
+                                <rect key="frame" x="323" y="723" width="56" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sketch"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9Ym-h8-tVc"/>
                     </view>
                     <navigationItem key="navigationItem" id="OIx-LE-K5e"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="CQC-Ym-SpS" id="T8e-Ac-sfB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ej8-Zw-viW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1112,8 +1130,8 @@
     </scenes>
     <resources>
         <image name="back" width="50" height="50"/>
-        <image name="box" width="50" height="50"/>
         <image name="cam" width="25" height="25"/>
+        <image name="collection" width="96" height="96"/>
         <image name="discover" width="25" height="25"/>
         <image name="eye" width="100" height="100"/>
         <image name="facebook" width="96" height="96"/>
@@ -1126,7 +1144,6 @@
         <image name="search" width="16.666666030883789" height="16.666666030883789"/>
         <image name="setting" width="50" height="50"/>
         <image name="sketch" width="96" height="96"/>
-        <image name="switch" width="50" height="50"/>
         <image name="user" width="96" height="96"/>
     </resources>
 </document>
