@@ -1,0 +1,36 @@
+# Blender MTL File: 'None'
+# Material Count: 3
+
+newmtl deadgood_love_chair_single_red_mtl_1
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Bump -bm 0.500000 dcmap_deadgood_love_chair_single_2.jpg
+map_Kd dcmap_deadgood_love_chair_single_6.jpg
+
+newmtl deadgood_love_chair_single_red_mtl_2
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Bump -bm 0.100000 dcmap_deadgood_love_chair_single_4.jpg
+map_Kd dcmap_deadgood_love_chair_single_3.jpg
+
+newmtl deadgood_love_chair_single_red_mtl_3
+Ns 10.000002
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1

@@ -1,0 +1,46 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 16.02.2010 16:03:49
+
+newmtl deadgood_love_chair_single_grey_mtl_1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka dcmap_deadgood_love_chair_single_1.jpg
+	map_Kd dcmap_deadgood_love_chair_single_1.jpg
+	map_bump -bm 0.5000 dcmap_deadgood_love_chair_single_2.jpg
+	bump -bm 0.5000 dcmap_deadgood_love_chair_single_2.jpg
+
+newmtl deadgood_love_chair_single_grey_mtl_2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka dcmap_deadgood_love_chair_single_3.jpg
+	map_Kd dcmap_deadgood_love_chair_single_3.jpg
+	map_bump -bm 0.1000 dcmap_deadgood_love_chair_single_4.jpg
+	bump -bm 0.1000 dcmap_deadgood_love_chair_single_4.jpg
+
+newmtl deadgood_love_chair_single_grey_mtl_3
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
