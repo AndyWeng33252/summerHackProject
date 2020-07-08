@@ -106,6 +106,7 @@ class CameraViewController: UIViewController {
 }
     
 //____________________________Creating Object_________________________________________________\\
+    var created = false
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else{return}
@@ -118,7 +119,10 @@ class CameraViewController: UIViewController {
             guard let hitResult = result.last else{return}
             let hitTransform = SCNMatrix4(hitResult.worldTransform)
             let hitVector = SCNVector3(hitTransform.m41, hitTransform.m42, hitTransform.m43)
-            createSofa(position: hitVector)
+            if !created{
+                createSofa(position: hitVector)
+                created = true
+            }
         }
         
     }
