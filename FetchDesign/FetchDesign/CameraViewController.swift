@@ -17,19 +17,22 @@ class CameraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configuration.planeDetection = [.horizontal, .vertical]
+        configuration.planeDetection = .horizontal
         configuration.environmentTexturing = .automatic
         self.arView.session.run(configuration)
+        //arView.delegate = self
         
         arView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(panGesture(_:))))
         arView.addGestureRecognizer(UIRotationGestureRecognizer(target: self, action: #selector(rotatePiece(_:))))
-        // Do any additional setup after loading the view.
     }
+    
+//________________________________Rotation_________________________________________________\\
+    
     var currentAngleY: Float = 0.0
     var currentNode: SCNNode!
     @objc
-    func rotatePiece(_ gesture: UIRotationGestureRecognizer) {   // Move the anchor point of the view's layer to the center of the
-    // user's two fingers. This creates a more natural looking rotation.
+    func rotatePiece(_ gesture: UIRotationGestureRecognizer) {
+        // user's two fingers. This creates a more natural looking rotation.
         let location = gesture.location(in: self.view)
         guard let hitNodeResult = arView.hitTest(location, options: nil).first else { return }
         currentNode = hitNodeResult.node
@@ -49,6 +52,9 @@ class CameraViewController: UIViewController {
 
          }
     }
+    
+//___________________________Translation_______________________________________________________\\
+    
     var lastPanLocation: SCNVector3?
     // the z poisition of the dragging point
     var panStartZ: CGFloat?
@@ -75,11 +81,22 @@ class CameraViewController: UIViewController {
 
             // The amount to move the box by is the distance between the last touch point and the new one (in 3d scene space)
             let movementVector = SCNVector3(worldTouchPosition.x - lastPanLocation!.x,
-                                            worldTouchPosition.y - lastPanLocation!.y,
-                                            worldTouchPosition.z - lastPanLocation!.z)
-            draggingNode!.localTranslate(by: movementVector)
+                                            0,
+                                            worldTouchPosition.y - lastPanLocation!.y)
+            
+            let boxTransform = (draggingNode?.transform)!
 
+            // Let's make a new matrix for translation +2 along X axis
+            let xTranslation = SCNMatrix4MakeTranslation(movementVector.x, movementVector.y, movementVector.z)
+
+            // Combine the two matrices, THE ORDER MATTERS !
+            // if you swap the parameters you will move it in parent's coord system
+            let newTransform = SCNMatrix4Mult(xTranslation, boxTransform)
+
+            // Allply the newly generated transform
+            draggingNode?.transform = newTransform
             self.lastPanLocation = worldTouchPosition
+            
         case .ended:
             (panStartZ, draggingNode) = (nil, nil)
 
@@ -88,6 +105,8 @@ class CameraViewController: UIViewController {
     }
 }
     
+//____________________________Creating Object_________________________________________________\\
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else{return}
         let sceneResult = arView.hitTest(touch.location(in: arView), options: nil)
@@ -95,7 +114,7 @@ class CameraViewController: UIViewController {
         if sceneNode?.parent?.name == "sofa"{
         }
         else {
-            let result = arView.hitTest(touch.location(in: arView), types: ARHitTestResult.ResultType.estimatedHorizontalPlane)
+            let result = arView.hitTest(touch.location(in: arView), types: ARHitTestResult.ResultType.existingPlane)
             guard let hitResult = result.last else{return}
             let hitTransform = SCNMatrix4(hitResult.worldTransform)
             let hitVector = SCNVector3(hitTransform.m41, hitTransform.m42, hitTransform.m43)
@@ -113,9 +132,59 @@ class CameraViewController: UIViewController {
             sofaNode.addChildNode(childNode)
         }
         
+        //adds gravity to Sofa nodes
         sofaNode.position = position
         arView.scene.rootNode.addChildNode(sofaNode)
     }
 
 }
-
+//___________________________Plane Detection and Physics ______________________________________\\
+//
+//extension CameraViewController: ARSCNViewDelegate {
+//    /* Method gets called every time the scene view’s session has a new
+//    ARAnchor added. An ARAnchor is an object that represents a physical
+//    location and orientation in 3D space.*/
+//    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+//        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+//
+//
+//        let width = CGFloat(planeAnchor.extent.x)
+//        let height = CGFloat(planeAnchor.extent.z)
+//        let plane = SCNPlane(width: width + 1100, height: height + 1100)
+//
+//        let planeNode = SCNNode(geometry: plane)
+//
+//
+//        let x = CGFloat(planeAnchor.center.x)
+//        let y = CGFloat(planeAnchor.center.y)
+//        let z = CGFloat(planeAnchor.center.z)
+//        planeNode.position = SCNVector3(x,y,z)
+//        planeNode.eulerAngles.x = -.pi / 2
+//        let planePhysicsBody = SCNPhysicsBody(type: .static, shape: nil)
+//        planePhysicsBody.allowsResting = true
+//        planeNode.physicsBody = planePhysicsBody
+//
+//        node.addChildNode(planeNode)
+//    }
+//
+//    /* Method gets called to update the original plane's position and size */
+//    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+//        // 1
+//        guard let planeAnchor = anchor as?  ARPlaneAnchor,
+//            let planeNode = node.childNodes.first,
+//            let plane = planeNode.geometry as? SCNPlane
+//            else { return }
+//
+//        // 2
+//        let width = CGFloat(planeAnchor.extent.x)
+//        let height = CGFloat(planeAnchor.extent.z)
+//        plane.width = width
+//        plane.height = height
+//
+//        // 3
+//        let x = CGFloat(planeAnchor.center.x)
+//        let y = CGFloat(planeAnchor.center.y)
+//        let z = CGFloat(planeAnchor.center.z)
+//        planeNode.position = SCNVector3(x, y, z)
+//    }
+// }
