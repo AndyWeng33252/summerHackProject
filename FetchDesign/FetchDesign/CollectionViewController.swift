@@ -12,7 +12,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var collectionList: [String] = ["Bedroom", "Living room", "Home office", "Kids room", "Dinning room"]
+    var collectionList: [String] = ["Bedroom", "Living room", "Home office", "Kids room", "Dining room"]
     let collectionCollectionViewCell = "CollectionCollectionViewCell"
     let collectionSegueIdentifier = "CollectionSegue"
     
@@ -43,8 +43,9 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == collectionSegueIdentifier,
         let nextVC = segue.destination as? CollectionDetailsViewController,
-        let _ = collectionView.indexPathsForSelectedItems?[0].row {
+        let index = collectionView.indexPathsForSelectedItems?[0].row {
             nextVC.delegate = self
+            nextVC.collection = collectionList[index]
         }
     }
 

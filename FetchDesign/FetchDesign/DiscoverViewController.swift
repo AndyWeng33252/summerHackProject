@@ -26,6 +26,9 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        if let vc = self.tabBarController?.viewControllers?[1] as? CameraViewController {
+            vc.isCancel = false
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

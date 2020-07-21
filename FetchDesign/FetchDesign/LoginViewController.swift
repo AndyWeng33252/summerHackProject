@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
                 self.popUnimplementedAlert(message: "Please check to make sure you used the right e-mail address and password")
             } else {
                 self.UserID = Auth.auth().currentUser!.uid
-                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+                self.performSegue(withIdentifier: self.loginSegueSegueIdentifier, sender: nil)
             }
         }
     }
