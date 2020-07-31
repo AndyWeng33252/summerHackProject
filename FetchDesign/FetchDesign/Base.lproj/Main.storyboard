@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zHr-D6-dbi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nJ8-qx-4ta">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,6 +8,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="Ypt-9f-jAt">
+            <objects>
+                <viewController id="nJ8-qx-4ta" customClass="AVPlayerViewController" customModule="FetchDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7kl-gB-pHP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ew1-st-qhs">
+                                <rect key="frame" x="352" y="62" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="Skip:" destination="nJ8-qx-4ta" eventType="touchUpInside" id="mse-fX-KhW"/>
+                                    <segue destination="zHr-D6-dbi" kind="presentation" modalPresentationStyle="fullScreen" id="9MH-d4-E2o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4uo-oZ-3o4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLH-yb-wjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1528" y="0.0"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="CJ9-BG-yVw">
             <objects>
@@ -106,6 +132,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xXg-1g-01d"/>
                     </view>
+                    <navigationItem key="navigationItem" id="M8u-gV-fFw"/>
                     <connections>
                         <outlet property="createAccount" destination="lro-pz-l6s" id="Nhm-Wb-uK8"/>
                         <outlet property="emailTextField" destination="eXM-oz-N55" id="dbJ-NY-aGh"/>
@@ -989,14 +1016,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ok"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5c-MG-df6" userLabel="Pick Button">
-                                <rect key="frame" x="58" y="712" width="34" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="collection"/>
-                                <connections>
-                                    <segue destination="nDB-RR-GXB" kind="show" id="92f-Qr-Xqd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
@@ -1017,7 +1036,7 @@
             <objects>
                 <viewController id="nDB-RR-GXB" customClass="CollectionViewController" customModule="FetchDesign" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lht-o3-960">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dZH-Fm-OW9" userLabel="Collection Collection View">
@@ -1188,7 +1207,6 @@
     <resources>
         <image name="back" width="50" height="50"/>
         <image name="cam" width="25" height="25"/>
-        <image name="collection" width="96" height="96"/>
         <image name="discover" width="25" height="25"/>
         <image name="eye" width="100" height="100"/>
         <image name="facebook" width="96" height="96"/>
