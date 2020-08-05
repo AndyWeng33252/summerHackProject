@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nJ8-qx-4ta">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zHr-D6-dbi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -291,6 +291,7 @@
                         <outlet property="passwordSecureButton" destination="8b8-8V-cmb" id="iSu-tB-Yts"/>
                         <outlet property="passwordTextField" destination="hp9-q7-2Vt" id="1Nx-t0-sjc"/>
                         <outlet property="usernameTextField" destination="7yU-O3-l5i" id="nta-pU-SH1"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="CreateAccountMainSegue" modalPresentationStyle="fullScreen" id="Ui5-t0-SM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHd-Ha-BWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1202,7 +1203,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="13z-iK-f1R"/>
+        <segue reference="Ui5-t0-SM9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back" width="50" height="50"/>

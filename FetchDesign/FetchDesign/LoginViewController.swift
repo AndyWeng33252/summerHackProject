@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 
+var UserID: String = ""
+
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
@@ -23,7 +25,6 @@ class LoginViewController: UIViewController {
     var loginSegueSegueIdentifier = "LoginSegue"
     var forgotPasswordSegueSegueIdentifier = "ForgotPasswordSegue"
     
-    var UserID: String = ""
     var isPasswordSecure = true
     
     override func viewDidLoad() {
@@ -47,7 +48,7 @@ class LoginViewController: UIViewController {
             if let _ = error, user == nil {
                 self.popUnimplementedAlert(message: "Please check to make sure you used the right e-mail address and password")
             } else {
-                self.UserID = Auth.auth().currentUser!.uid
+                UserID = Auth.auth().currentUser!.uid
                 self.performSegue(withIdentifier: self.loginSegueSegueIdentifier, sender: nil)
             }
         }
