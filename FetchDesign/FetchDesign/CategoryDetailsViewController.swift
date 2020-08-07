@@ -46,18 +46,5 @@ class CategoryDetailsViewController: UIViewController {
     @IBAction func cancelPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-        if segue.identifier == furnitureCameraSugueIdentifier,
-        let nextVC = segue.destination as? MainTabBarController,
-        let vc = nextVC.viewControllers?[1] as? CameraViewController {
-            vc.funitureCategory = category
-            vc.isCancel = true
-            nextVC.selectedIndex = 1
-        }
-        
-    }
 
 }

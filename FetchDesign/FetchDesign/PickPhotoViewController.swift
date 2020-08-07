@@ -1,25 +1,26 @@
 //
-//  AlnumsViewController.swift
+//  PickPhotoViewController.swift
 //  FetchDesign
 //
-//  Created by Jing Fang on 6/27/20.
+//  Created by Andy Weng on 8/5/20.
 //  Copyright © 2020 J.A.M. All rights reserved.
 //
 
 import UIKit
-import FirebaseDatabase
 import FirebaseStorage
+import FirebaseDatabase
 import FirebaseAuth
 
-class AlnumsViewController: UIViewController {
+class PickPhotoViewController: UIViewController {
     
     let UserID = Auth.auth().currentUser!.uid
     let dataRef = Database.database().reference()
     let storage = Storage.storage()
     @IBOutlet weak var collectionView: UICollectionView!
     var photoArray = [String]()
-    var selectedPhotoURL: String!
-    
+    var selectedImage: UIImage!
+    var selectedImageURL: String!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         getPhotoUpdate()
@@ -34,47 +35,59 @@ class AlnumsViewController: UIViewController {
     }
     
     func getPhotoUpdate() {
-        dataRef.child("users").child(UserID).child("images").observe(.value, with: {(snapshot) in
-            for child in snapshot.children {
-                self.photoArray.append((child as! DataSnapshot).value as! String)
-            }
+        
+        dataRef.child("users").child(UserID).child("images").observe(.value, with:{(snapshot) in
+                for child in snapshot.children {
+                    self.photoArray.append((child as! DataSnapshot).value as! String)
+                }
             self.collectionView.reloadData()
         })
     }
+    
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // Get the new view controller using segue.destination.
+    // Pass the selected object to the new view controller.
     }
     */
 }
 
-extension AlnumsViewController:UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedPhotoURL = photoArray[indexPath.item]
-        performSegue(withIdentifier: "seePhoto", sender: nil)
-    }
+extension PickPhotoViewController:UICollectionViewDelegate {
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ViewImageViewController{
-            vc.imageURL = selectedPhotoURL
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        storage.reference(forURL: photoArray[indexPath.item]).getData(maxSize: 1 * 1024 * 1024) { data, error in
+          if let error = error {
+            return
+          } else {
+            self.selectedImage = UIImage(data: data!)
+            self.selectedImageURL = self.photoArray[indexPath.item]
+            self.performSegue(withIdentifier: "goBackToPost", sender: nil)
+          }
         }
     }
     
-}
-
-extension AlnumsViewController:UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "albumCell", for: indexPath) as! albumCell
-        cell.configCell(imageURL: photoArray[indexPath.item])
-    
-        return cell
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? AddPostViewController {
+            vc.postImage = self.selectedImage
+            vc.postImageURL = self.selectedImageURL
+        }
+        
     }
     
+        
+}
+
+extension PickPhotoViewController:UICollectionViewDataSource {
+        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "albumCell", for: indexPath) as! albumCell
+            cell.configCell(imageURL: photoArray[indexPath.item])
+        
+        return cell
+    }
+        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         photoArray.count
     }

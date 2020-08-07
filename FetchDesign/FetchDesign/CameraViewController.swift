@@ -15,8 +15,7 @@ class CameraViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var cancelButton: UIButton!
     
-    var funitureCategory = String()
-    var isCancel = Bool()
+    var furnitureCategory = String()
     
     let configuration = ARWorldTrackingConfiguration()
     
@@ -30,12 +29,6 @@ class CameraViewController: UIViewController {
         sceneView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(panGesture(_:))))
         sceneView.addGestureRecognizer(UIRotationGestureRecognizer(target: self, action: #selector(rotatePiece(_:))))
         
-        // cancel
-        if (isCancel) {
-            cancelButton.isHidden = false
-        } else {
-            cancelButton.isHidden = true
-        }
     }
     
     // rotation
@@ -138,38 +131,46 @@ class CameraViewController: UIViewController {
     }
     
 //    func createSofa(position: SCNVector3){
-//        let sofaScene = SCNScene(named: "SceneKit.scnassets/Sofa/sofa.scn")!
-//        let sofaNode = SCNNode()
-//        sofaNode.name = "sofa"
-//        let sofaChildNodes = sofaScene.rootNode.childNodes
-//        for childNode in sofaChildNodes{
-//            sofaNode.addChildNode(childNode)
-//        }
+//            let sofaScene = SCNScene(named: "SceneKit.scnassets/Sofa/sofa.scn")!
+//            let sofaNode = SCNNode()
+//            sofaNode.name = "sofa"
+//            let sofaChildNodes = sofaScene.rootNode.childNodes
+//            for childNode in sofaChildNodes{
+//                sofaNode.addChildNode(childNode)
+//            }
 //
-//        //adds gravity to Sofa nodes
-//        sofaNode.position = position
-//        sceneView.scene.rootNode.addChildNode(sofaNode)
-//    }
+//            //adds gravity to Sofa nodes
+//            sofaNode.position = position
+//            sceneView.scene.rootNode.addChildNode(sofaNode)
+//        }
     
     func createFurniture(position: SCNVector3){
         var path = String()
         var name = String()
-        print(funitureCategory)
-        if (funitureCategory == "Sofas") {
+        guard furnitureCategory != "" else {
+            popUnimplementedAlert(message: "Choose a Furniture")
+            return
+        }
+        if (furnitureCategory == "Sofas") {
             path = "SceneKit.scnassets/Sofa/sofa.scn"
             name = "sofa"
-        } else if (funitureCategory == "Beds") {
+        } else if (furnitureCategory == "Beds") {
             path = "SceneKit.scnassets/Bed/bed.scn"
             name = "sofa"
-        } else if (funitureCategory == "Desks") {
+        } else if (furnitureCategory == "Desks") {
             path = "SceneKit.scnassets/Desk/desk.scn"
             name = "sofa"
-        } else if (funitureCategory == "Dining Tables") {
+        } else if (furnitureCategory == "Dining Tables") {
             path = "SceneKit.scnassets/Table/table.scn"
             name = "sofa"
-        } else if (funitureCategory == "Armchairs") {
+        } else if (furnitureCategory == "Armchairs") {
             path = "SceneKit.scnassets/Armchair/armchair.scn"
             name = "sofa"
+        }
+        
+        guard path != "", name != "" else {
+            print("none")
+            return
         }
         let furnitureScene = SCNScene(named: path)!
         let node = SCNNode()
@@ -184,8 +185,31 @@ class CameraViewController: UIViewController {
         sceneView.scene.rootNode.addChildNode(node)
     }
     
+    func popUnimplementedAlert(message:String) {
+        let controller = UIAlertController(
+            title: "Attention",
+            message: message,
+            preferredStyle: .alert)
+        
+        controller.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(controller,animated:true,completion:nil)
+    }
+    
     @IBAction func cancelPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "takePic" {
+            let vc = segue.destination as! EditPhotoViewController
+            vc.imageFromCamera = sceneView.snapshot()
+        }
+    }
+    
+    @IBAction func backToCamera(segue: UIStoryboardSegue) {
+        var vc = segue.source as? CategoryDetailsViewController
+        furnitureCategory = vc?.category as! String
+        created = false
     }
     
 }

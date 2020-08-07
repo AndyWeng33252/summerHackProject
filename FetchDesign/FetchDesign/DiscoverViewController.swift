@@ -25,10 +25,10 @@ class DiscoverViewController: UIViewController, UICollectionViewDelegate, UIColl
         searchTextField.placeholder = "Search"
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        if let vc = self.tabBarController?.viewControllers?[1] as? CameraViewController {
-            vc.isCancel = false
-        }
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
