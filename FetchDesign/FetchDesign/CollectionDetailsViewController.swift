@@ -92,8 +92,7 @@ class CollectionDetailsViewController: UIViewController, UICollectionViewDelegat
             if (category == "Dining tables") {
                 category = "Dining Tables"
             }
-            vc.funitureCategory = category
-            vc.isCancel = false
+            vc.furnitureCategory = category
             nextVC.selectedIndex = 1
         }
     }

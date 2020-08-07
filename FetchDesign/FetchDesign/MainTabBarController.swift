@@ -10,13 +10,18 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tabBarController
         // Do any additional setup after loading the view.
     }
-    
-
+  
+//    @IBAction func camera(segue:UIStoryboardSegue) {
+//        var tabBarController: UITabBarController = (self.window?.rootViewController as? UITabBarController)!
+//      tabBarController.selectedIndex = 1
+//    }
+      
     /*
     // MARK: - Navigation
 

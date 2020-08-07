@@ -33,8 +33,104 @@
 		1C8D454924A7A01F0082EE1D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D454824A7A01F0082EE1D /* SettingsViewController.swift */; };
 		1C8D454B24A7A08B0082EE1D /* AlnumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D454A24A7A08B0082EE1D /* AlnumsViewController.swift */; };
 		1C8D454D24A7AA110082EE1D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D454C24A7AA110082EE1D /* LoginViewController.swift */; };
+		BB3C991B24D4DD2F00CE3905 /* AVPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C991A24D4DD2F00CE3905 /* AVPlayerViewController.swift */; };
+		BB3C995224D4DDCB00CE3905 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = BB3C991D24D4DDCA00CE3905 /* Manifest.lock */; };
+		BB3C995324D4DDCB00CE3905 /* GTMSessionFetcher in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994324D4DDCA00CE3905 /* GTMSessionFetcher */; };
+		BB3C995424D4DDCB00CE3905 /* leveldb-library in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994424D4DDCA00CE3905 /* leveldb-library */; };
+		BB3C995524D4DDCB00CE3905 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994524D4DDCA00CE3905 /* Headers */; };
+		BB3C995624D4DDCB00CE3905 /* FirebaseStorage in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994624D4DDCA00CE3905 /* FirebaseStorage */; };
+		BB3C995724D4DDCB00CE3905 /* FirebaseInstanceID in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994724D4DDCA00CE3905 /* FirebaseInstanceID */; };
+		BB3C995824D4DDCB00CE3905 /* FirebaseDatabase in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994824D4DDCA00CE3905 /* FirebaseDatabase */; };
+		BB3C995924D4DDCB00CE3905 /* GoogleAppMeasurement in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994924D4DDCA00CE3905 /* GoogleAppMeasurement */; };
+		BB3C995A24D4DDCB00CE3905 /* FirebaseAuth in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994A24D4DDCB00CE3905 /* FirebaseAuth */; };
+		BB3C995B24D4DDCB00CE3905 /* Firebase in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994B24D4DDCB00CE3905 /* Firebase */; };
+		BB3C995C24D4DDCB00CE3905 /* FirebaseCore in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994C24D4DDCB00CE3905 /* FirebaseCore */; };
+		BB3C995D24D4DDCB00CE3905 /* FirebaseAnalytics in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994D24D4DDCB00CE3905 /* FirebaseAnalytics */; };
+		BB3C995E24D4DDCB00CE3905 /* Target Support Files in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994E24D4DDCB00CE3905 /* Target Support Files */; };
+		BB3C995F24D4DDCB00CE3905 /* GoogleUtilities in Resources */ = {isa = PBXBuildFile; fileRef = BB3C994F24D4DDCB00CE3905 /* GoogleUtilities */; };
+		BB3C996024D4DDCB00CE3905 /* FirebaseAuthInterop in Resources */ = {isa = PBXBuildFile; fileRef = BB3C995024D4DDCB00CE3905 /* FirebaseAuthInterop */; };
+		BB3C996124D4DDCB00CE3905 /* nanopb in Resources */ = {isa = PBXBuildFile; fileRef = BB3C995124D4DDCB00CE3905 /* nanopb */; };
+		BB3C996224D4DF0E00CE3905 /* sample-mp4-file.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BB3C991C24D4DD4800CE3905 /* sample-mp4-file.mp4 */; };
+		BB3C997524D77D0200CE3905 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C997424D77D0200CE3905 /* AddPostViewController.swift */; };
+		BB3C997924D79BD800CE3905 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C997824D79BD800CE3905 /* EditPhotoViewController.swift */; };
+		BB3C997B24DA28C500CE3905 /* albumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C997A24DA28C500CE3905 /* albumCell.swift */; };
+		BB3C997D24DB4DFC00CE3905 /* PickPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C997C24DB4DFC00CE3905 /* PickPhotoViewController.swift */; };
+		BB3C997F24DB64BE00CE3905 /* ViewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3C997E24DB64BE00CE3905 /* ViewImageViewController.swift */; };
 		E0E31F42168DBD91BDDC0209 /* Pods_FetchDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1613628CAC6D2B91D56244AA /* Pods_FetchDesign.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB3C992F24D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43B1E4CD7B30B9FD278100133C2AC788;
+			remoteInfo = FirebaseAuth;
+		};
+		BB3C993124D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2B63D462DB7F827C4B11FD51E4F8E2D;
+			remoteInfo = FirebaseCore;
+		};
+		BB3C993324D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51671C73F008B5C0C3751B3855999213;
+			remoteInfo = FirebaseDatabase;
+		};
+		BB3C993524D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DA0D814DFCB860D31D7BCD63D795858;
+			remoteInfo = FirebaseInstanceID;
+		};
+		BB3C993724D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9CF8FA5F01F446F01AAC7331075452AD;
+			remoteInfo = FirebaseStorage;
+		};
+		BB3C993924D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B43874C6CBB50E7134FBEC24BABFE14F;
+			remoteInfo = GoogleUtilities;
+		};
+		BB3C993B24D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1998E0D8085221AD87F89B614C10E52;
+			remoteInfo = GTMSessionFetcher;
+		};
+		BB3C993D24D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A9F46A999C47653013D3AD854352507;
+			remoteInfo = "leveldb-library";
+		};
+		BB3C993F24D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06FC5C9CF96D60C50FCD47D339C91951;
+			remoteInfo = nanopb;
+		};
+		BB3C994124D4DDCA00CE3905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA4BE2AC27DBE6E8A90934FE25A615B0;
+			remoteInfo = "Pods-FetchDesign";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1613628CAC6D2B91D56244AA /* Pods_FetchDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FetchDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +163,30 @@
 		1C8D454A24A7A08B0082EE1D /* AlnumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlnumsViewController.swift; sourceTree = "<group>"; };
 		1C8D454C24A7AA110082EE1D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		34DBC28062CBA7E49FDEACC9 /* Pods-FetchDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchDesign.debug.xcconfig"; path = "Target Support Files/Pods-FetchDesign/Pods-FetchDesign.debug.xcconfig"; sourceTree = "<group>"; };
+		BB3C991A24D4DD2F00CE3905 /* AVPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerViewController.swift; sourceTree = "<group>"; };
+		BB3C991C24D4DD4800CE3905 /* sample-mp4-file.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sample-mp4-file.mp4"; sourceTree = "<group>"; };
+		BB3C991D24D4DDCA00CE3905 /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Manifest.lock; sourceTree = "<group>"; };
+		BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
+		BB3C994324D4DDCA00CE3905 /* GTMSessionFetcher */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GTMSessionFetcher; sourceTree = "<group>"; };
+		BB3C994424D4DDCA00CE3905 /* leveldb-library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "leveldb-library"; sourceTree = "<group>"; };
+		BB3C994524D4DDCA00CE3905 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Headers; sourceTree = "<group>"; };
+		BB3C994624D4DDCA00CE3905 /* FirebaseStorage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FirebaseStorage; sourceTree = "<group>"; };
+		BB3C994724D4DDCA00CE3905 /* FirebaseInstanceID */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FirebaseInstanceID; sourceTree = "<group>"; };
+		BB3C994824D4DDCA00CE3905 /* FirebaseDatabase */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FirebaseDatabase; sourceTree = "<group>"; };
+		BB3C994924D4DDCA00CE3905 /* GoogleAppMeasurement */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GoogleAppMeasurement; sourceTree = "<group>"; };
+		BB3C994A24D4DDCB00CE3905 /* FirebaseAuth */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FirebaseAuth; sourceTree = "<group>"; };
+		BB3C994B24D4DDCB00CE3905 /* Firebase */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Firebase; sourceTree = "<group>"; };
+		BB3C994C24D4DDCB00CE3905 /* FirebaseCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FirebaseCore; sourceTree = "<group>"; };
+		BB3C994D24D4DDCB00CE3905 /* FirebaseAnalytics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FirebaseAnalytics; sourceTree = "<group>"; };
+		BB3C994E24D4DDCB00CE3905 /* Target Support Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Target Support Files"; sourceTree = "<group>"; };
+		BB3C994F24D4DDCB00CE3905 /* GoogleUtilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GoogleUtilities; sourceTree = "<group>"; };
+		BB3C995024D4DDCB00CE3905 /* FirebaseAuthInterop */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FirebaseAuthInterop; sourceTree = "<group>"; };
+		BB3C995124D4DDCB00CE3905 /* nanopb */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nanopb; sourceTree = "<group>"; };
+		BB3C997424D77D0200CE3905 /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		BB3C997824D79BD800CE3905 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
+		BB3C997A24DA28C500CE3905 /* albumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumCell.swift; sourceTree = "<group>"; };
+		BB3C997C24DB4DFC00CE3905 /* PickPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPhotoViewController.swift; sourceTree = "<group>"; };
+		BB3C997E24DB64BE00CE3905 /* ViewImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewImageViewController.swift; sourceTree = "<group>"; };
 		C9D7A144EFA28700E7136065 /* Pods-FetchDesign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchDesign.release.xcconfig"; path = "Target Support Files/Pods-FetchDesign/Pods-FetchDesign.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +226,7 @@
 				1C8D452A24A6A0C60082EE1D /* AppDelegate.swift */,
 				1C8D452C24A6A0C60082EE1D /* SceneDelegate.swift */,
 				1C8D454C24A7AA110082EE1D /* LoginViewController.swift */,
+				BB3C991A24D4DD2F00CE3905 /* AVPlayerViewController.swift */,
 				1C8D452E24A6A0C60082EE1D /* DiscoverViewController.swift */,
 				1C8D453024A6A0C60082EE1D /* CameraViewController.swift */,
 				1C8D454224A79EDE0082EE1D /* NewsFeedViewController.swift */,
@@ -115,7 +236,13 @@
 				1C2E057E24B7F572000BE6A4 /* CategoryDetailsViewController.swift */,
 				1C8D454824A7A01F0082EE1D /* SettingsViewController.swift */,
 				1C8D454A24A7A08B0082EE1D /* AlnumsViewController.swift */,
+				BB3C991C24D4DD4800CE3905 /* sample-mp4-file.mp4 */,
 				1C8D453224A6A0C60082EE1D /* Main.storyboard */,
+				BB3C997E24DB64BE00CE3905 /* ViewImageViewController.swift */,
+				BB3C997C24DB4DFC00CE3905 /* PickPhotoViewController.swift */,
+				BB3C997A24DA28C500CE3905 /* albumCell.swift */,
+				BB3C997824D79BD800CE3905 /* EditPhotoViewController.swift */,
+				BB3C997424D77D0200CE3905 /* AddPostViewController.swift */,
 				1C2E057A24B7DC7F000BE6A4 /* CategoryColorCollectionViewCell.swift */,
 				1C2E057824B7B64C000BE6A4 /* DetailsCollectionViewCell.swift */,
 				1C2E057424B01322000BE6A4 /* CollectionDetailsViewController.swift */,
@@ -145,10 +272,44 @@
 		42EE516EAD0884D15785DC29 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				BB3C994B24D4DDCB00CE3905 /* Firebase */,
+				BB3C994D24D4DDCB00CE3905 /* FirebaseAnalytics */,
+				BB3C994A24D4DDCB00CE3905 /* FirebaseAuth */,
+				BB3C995024D4DDCB00CE3905 /* FirebaseAuthInterop */,
+				BB3C994C24D4DDCB00CE3905 /* FirebaseCore */,
+				BB3C994824D4DDCA00CE3905 /* FirebaseDatabase */,
+				BB3C994724D4DDCA00CE3905 /* FirebaseInstanceID */,
+				BB3C994624D4DDCA00CE3905 /* FirebaseStorage */,
+				BB3C994924D4DDCA00CE3905 /* GoogleAppMeasurement */,
+				BB3C994F24D4DDCB00CE3905 /* GoogleUtilities */,
+				BB3C994324D4DDCA00CE3905 /* GTMSessionFetcher */,
+				BB3C994524D4DDCA00CE3905 /* Headers */,
+				BB3C994424D4DDCA00CE3905 /* leveldb-library */,
+				BB3C991D24D4DDCA00CE3905 /* Manifest.lock */,
+				BB3C995124D4DDCB00CE3905 /* nanopb */,
+				BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */,
+				BB3C994E24D4DDCB00CE3905 /* Target Support Files */,
 				34DBC28062CBA7E49FDEACC9 /* Pods-FetchDesign.debug.xcconfig */,
 				C9D7A144EFA28700E7136065 /* Pods-FetchDesign.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB3C991F24D4DDCA00CE3905 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB3C993024D4DDCA00CE3905 /* FirebaseAuth.framework */,
+				BB3C993224D4DDCA00CE3905 /* FirebaseCore.framework */,
+				BB3C993424D4DDCA00CE3905 /* FirebaseDatabase.framework */,
+				BB3C993624D4DDCA00CE3905 /* FirebaseInstanceID.framework */,
+				BB3C993824D4DDCA00CE3905 /* FirebaseStorage.framework */,
+				BB3C993A24D4DDCA00CE3905 /* GoogleUtilities.framework */,
+				BB3C993C24D4DDCA00CE3905 /* GTMSessionFetcher.framework */,
+				BB3C993E24D4DDCA00CE3905 /* leveldb.framework */,
+				BB3C994024D4DDCA00CE3905 /* nanopb.framework */,
+				BB3C994224D4DDCA00CE3905 /* Pods_FetchDesign.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,12 +360,91 @@
 			mainGroup = 1C8D451E24A6A0C60082EE1D;
 			productRefGroup = 1C8D452824A6A0C60082EE1D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BB3C991F24D4DDCA00CE3905 /* Products */;
+					ProjectRef = BB3C991E24D4DDCA00CE3905 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1C8D452624A6A0C60082EE1D /* FetchDesign */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BB3C993024D4DDCA00CE3905 /* FirebaseAuth.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseAuth.framework;
+			remoteRef = BB3C992F24D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB3C993224D4DDCA00CE3905 /* FirebaseCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseCore.framework;
+			remoteRef = BB3C993124D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB3C993424D4DDCA00CE3905 /* FirebaseDatabase.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseDatabase.framework;
+			remoteRef = BB3C993324D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB3C993624D4DDCA00CE3905 /* FirebaseInstanceID.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseInstanceID.framework;
+			remoteRef = BB3C993524D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB3C993824D4DDCA00CE3905 /* FirebaseStorage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseStorage.framework;
+			remoteRef = BB3C993724D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB3C993A24D4DDCA00CE3905 /* GoogleUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleUtilities.framework;
+			remoteRef = BB3C993924D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB3C993C24D4DDCA00CE3905 /* GTMSessionFetcher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GTMSessionFetcher.framework;
+			remoteRef = BB3C993B24D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB3C993E24D4DDCA00CE3905 /* leveldb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = leveldb.framework;
+			remoteRef = BB3C993D24D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB3C994024D4DDCA00CE3905 /* nanopb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = nanopb.framework;
+			remoteRef = BB3C993F24D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB3C994224D4DDCA00CE3905 /* Pods_FetchDesign.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_FetchDesign.framework;
+			remoteRef = BB3C994124D4DDCA00CE3905 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1C8D452524A6A0C60082EE1D /* Resources */ = {
@@ -214,8 +454,25 @@
 				1C8D453924A6A0C80082EE1D /* LaunchScreen.storyboard in Resources */,
 				1C8B6F7E24AC4815003E9543 /* GoogleService-Info.plist in Resources */,
 				1C8D453624A6A0C80082EE1D /* Assets.xcassets in Resources */,
+				BB3C995624D4DDCB00CE3905 /* FirebaseStorage in Resources */,
+				BB3C995524D4DDCB00CE3905 /* Headers in Resources */,
+				BB3C995B24D4DDCB00CE3905 /* Firebase in Resources */,
+				BB3C995D24D4DDCB00CE3905 /* FirebaseAnalytics in Resources */,
+				BB3C996024D4DDCB00CE3905 /* FirebaseAuthInterop in Resources */,
+				BB3C995E24D4DDCB00CE3905 /* Target Support Files in Resources */,
+				BB3C995F24D4DDCB00CE3905 /* GoogleUtilities in Resources */,
+				BB3C995C24D4DDCB00CE3905 /* FirebaseCore in Resources */,
+				BB3C995A24D4DDCB00CE3905 /* FirebaseAuth in Resources */,
+				BB3C995224D4DDCB00CE3905 /* Manifest.lock in Resources */,
+				BB3C995824D4DDCB00CE3905 /* FirebaseDatabase in Resources */,
+				BB3C995924D4DDCB00CE3905 /* GoogleAppMeasurement in Resources */,
 				1C2E057724B669C2000BE6A4 /* SceneKit.scnassets in Resources */,
+				BB3C995324D4DDCB00CE3905 /* GTMSessionFetcher in Resources */,
+				BB3C996124D4DDCB00CE3905 /* nanopb in Resources */,
 				1C8D453424A6A0C60082EE1D /* Main.storyboard in Resources */,
+				BB3C996224D4DF0E00CE3905 /* sample-mp4-file.mp4 in Resources */,
+				BB3C995724D4DDCB00CE3905 /* FirebaseInstanceID in Resources */,
+				BB3C995424D4DDCB00CE3905 /* leveldb-library in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,15 +526,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C2E057324B00A8D000BE6A4 /* CollectionCollectionViewCell.swift in Sources */,
+				BB3C997924D79BD800CE3905 /* EditPhotoViewController.swift in Sources */,
 				1C8D453124A6A0C60082EE1D /* CameraViewController.swift in Sources */,
+				BB3C997F24DB64BE00CE3905 /* ViewImageViewController.swift in Sources */,
 				1C8D452F24A6A0C60082EE1D /* DiscoverViewController.swift in Sources */,
 				1C8B6F7C24AC475D003E9543 /* MainTabBarController.swift in Sources */,
 				1C8D454724A79F810082EE1D /* CategoryViewController.swift in Sources */,
 				1C2E057924B7B64C000BE6A4 /* DetailsCollectionViewCell.swift in Sources */,
 				1C2E057B24B7DC80000BE6A4 /* CategoryColorCollectionViewCell.swift in Sources */,
 				1C8D454524A79F0C0082EE1D /* AccountViewController.swift in Sources */,
+				BB3C991B24D4DD2F00CE3905 /* AVPlayerViewController.swift in Sources */,
 				1C2E056D24AD57EB000BE6A4 /* CreateAccountViewController.swift in Sources */,
 				1C2E057524B01322000BE6A4 /* CollectionDetailsViewController.swift in Sources */,
+				BB3C997B24DA28C500CE3905 /* albumCell.swift in Sources */,
 				1C2E057F24B7F572000BE6A4 /* CategoryDetailsViewController.swift in Sources */,
 				1C8D452B24A6A0C60082EE1D /* AppDelegate.swift in Sources */,
 				1C8D452D24A6A0C60082EE1D /* SceneDelegate.swift in Sources */,
@@ -285,9 +546,11 @@
 				1C2E057124B00771000BE6A4 /* CollectionViewController.swift in Sources */,
 				1C8D454B24A7A08B0082EE1D /* AlnumsViewController.swift in Sources */,
 				1C2E057D24B7DD11000BE6A4 /* CategoryTableViewCell.swift in Sources */,
+				BB3C997D24DB4DFC00CE3905 /* PickPhotoViewController.swift in Sources */,
 				1C8D454324A79EDE0082EE1D /* NewsFeedViewController.swift in Sources */,
 				1C8B6F7824ABF7AD003E9543 /* CategoryCollectionViewCell.swift in Sources */,
 				1C8D454D24A7AA110082EE1D /* LoginViewController.swift in Sources */,
+				BB3C997524D77D0200CE3905 /* AddPostViewController.swift in Sources */,
 				1C8D454924A7A01F0082EE1D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,13 +697,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7BQ46M4Y5G;
+				DEVELOPMENT_TEAM = 8GDG7JTWP6;
 				INFOPLIST_FILE = FetchDesign/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jamStudio.FetchDesign;
+				PRODUCT_BUNDLE_IDENTIFIER = AndyjamStudio.FetchDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,13 +716,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7BQ46M4Y5G;
+				DEVELOPMENT_TEAM = 8GDG7JTWP6;
 				INFOPLIST_FILE = FetchDesign/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jamStudio.FetchDesign;
+				PRODUCT_BUNDLE_IDENTIFIER = AndyjamStudio.FetchDesign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
